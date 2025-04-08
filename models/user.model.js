@@ -4,8 +4,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    lowercase: true,
-
+    lowercase: false,
     minlength: [3, "username must be at least 3 characters"],
   },
   email: {
@@ -20,7 +19,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    lowercase: true,
     minlength: [6, "password must be at least 3 characters"],
   },
 });
