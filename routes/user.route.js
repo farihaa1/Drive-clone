@@ -80,8 +80,9 @@ router.post(
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
+    res.cookie('token',token)
 
-    return res.status(200).json({ token });
+    res.send('logged in')
   }
 );
 
